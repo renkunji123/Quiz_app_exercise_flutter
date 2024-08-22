@@ -1,14 +1,15 @@
 // result_page.dart
 import 'package:flutter/material.dart';
 import 'package:quiz_app/models/quiz_question.dart';
-import 'theme.dart';
+
 
 class ResultPage extends StatelessWidget {
+
   final int correctAnswersCount;
   final List<QuizQuestion> questions;
   final List<String> userAnswers;
 
-  ResultPage({
+  const ResultPage({super.key,
     required this.correctAnswersCount,
     required this.questions,
     required this.userAnswers,
@@ -49,6 +50,7 @@ class ResultPage extends StatelessWidget {
                   return ListTile(
                     title: Text(question.text,
                     style: const TextStyle(
+                      fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),),
 
@@ -62,6 +64,8 @@ class ResultPage extends StatelessWidget {
                         ),
                         Text('Correct answer: $correctAnswer',
                           style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
                         ),

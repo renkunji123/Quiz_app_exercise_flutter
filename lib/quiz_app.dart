@@ -37,6 +37,7 @@ class QuizApp extends StatelessWidget {
 
             const Text('Learn FLutter by the fun way!',
               style: TextStyle(
+                fontWeight: FontWeight.bold,
                 fontSize: 28,
                 color: Colors.white,
               ),
